@@ -1,1 +1,1 @@
-I'm new to coding.
+New to coding.
