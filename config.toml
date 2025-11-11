@@ -1,0 +1,70 @@
+theme = "catppuccin_frappe"
+
+[keys.normal]
+"A-0" = ":bn" #Next buffer
+
+"A-9" = ":bp" #Previous buffer
+
+C-o = ":open ~/AppData/Roaming/.he/config.toml" # Maps Ctrl-o to opening of the helix config file
+
+[keys.insert]
+
+"A-0" = ":bn" #Next buffer
+
+"A-9" = ":bp" #Previous buffer
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-color-swatches = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "underline"
+select = "underline"
+
+[editor]
+line-number = "relative"
+mouse = false
+scrolloff = 20
+popup-border = "all"
+completion-timeout = 1200
+auto-format = false
+cursorline = true
+
+gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
+end-of-line-diagnostics = "hint"
+
+# editor misc
+bufferline = "always"
+trim-final-newlines = true
+true-color = true
+scroll-lines = 10
+idle-timeout = 800
+completion-trigger-len = 3
+completion-replace = true
+color-modes = true
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 50
+max-indent-retain = 0
+
+[editor.statusline]
+separator = "|"
+left = ["mode", "separator", "spinner", "spacer", "version-control", "spacer", "spacer", "file-name", "file-modification-indicator", "read-only-indicator" ]
+right = ["diagnostics", "position", "file-encoding", "selections", "primary-selection-length", "register", "spacer", "separator", "file-type", "total-line-numbers"]
+mode.normal = "NORMAL"
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+character = "┊"
+
+[editor.whitespace.render]
+tab = "all"
+[editor.whitespace.characters]
+tab = "→"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
